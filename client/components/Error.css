@@ -1,0 +1,33 @@
+.err{
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 80vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.err div{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.one{
+  font-size: 12rem;
+}
+.two{
+    font-size: 1.2rem;
+    font-weight:bold;
+}
+
+.err button{
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    border-radius: 0.5rem;
+    width: 7rem;
+    color: white;
+    border: 2px solid white;
+    background-color: black;
+    margin-left: 2rem;
+    height: 2.5rem;
+}

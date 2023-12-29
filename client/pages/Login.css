@@ -1,0 +1,102 @@
+.registration{
+  background-color: black;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+ align-items: center;
+}
+
+.regpart1{
+ width: 50%;
+ height: 100%;
+ display: flex;
+ justify-content:center;
+ 
+ align-items:center;
+ 
+}
+
+
+.regpart1 img{
+  width: 80%;
+  height: 50%;
+  border-radius: 100%;
+  width: 50%;
+  height: 70%;
+}
+
+.regpart2{
+  width: 50%;
+ height:  100%;
+ 
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.inregpart2{
+  width: 60%;
+  height:  60%;
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: larger;
+}
+
+.myhead span {
+  border-bottom: 5px solid blue;
+}
+.inregpart2 .myhead{
+  width: 100%;
+  height:  20%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:xx-large;
+  font-weight: bolder;
+  color: white;
+}
+
+.inregpart2 .myform{
+  width: 100%;
+  height: 80%;
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.myform button{
+  width: 30%;
+  height: 12%;
+  border-radius: 0.5rem;
+  background-color: #6565eb;
+  
+  color:white;
+  font-size:large;
+  border: 2px solid white;
+}
+
+.myform input{
+  width: 100%;
+  height: 15%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid white;
+  
+    background-color: thistle;
+}
+
+@media only screen and (max-width:600px){
+  .registration{
+    flex-direction: column;
+  } 
+}
+
