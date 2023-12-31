@@ -1,5 +1,5 @@
 const User=require("../models/user-model")
-const bcrypt=require("bcrypt")
+const bcrypt = require('bcryptjs');
 exports.register=async(req,res)=>{
     try{
         console.log("hii jaya from backend")
@@ -7,7 +7,7 @@ exports.register=async(req,res)=>{
        const {username,email,phone,password}=req.body;
        if(!username || !email || !phone || !password){
         return res.status(400).json({
-            sucess:false,
+            success:false,
             message:"all field are required"
         })
        }

@@ -1,5 +1,5 @@
 const User=require("../models/user-model")
-const bcrypt=require("bcrypt")
+const bcrypt = require('bcryptjs');
 exports.login=async(req,res)=>{
   console.log("hii from login backend")
   try{
