@@ -21,14 +21,14 @@ const Signup = () => {
     console.log("hello")
     console.log(formdata)
    
-     var userCreated = await axios.post("http://localhost:4000/api/v1/register",formdata);
-    //  setFormData({username:"",email:"",phone:"",password:""})
+     const userCreated = await axios.post("http://localhost:4000/api/v1/register",formdata);
+     setFormData({username:"",email:"",phone:"",password:""})
      console.log("hello",userCreated)
      navigate("/login")
     }
     catch(error){
       console.log(error)
-      // message.error(userCreated.data.message)
+      
     }
   }
   return (
@@ -53,7 +53,7 @@ const Signup = () => {
                 <input type="text" id="phn" name="phone" value={formdata.phone} onChange={handleOnChange} className="txt2reg"/>
                 
                 <label htmlFor="pas">Password</label>
-                <input type="text" id="pas" name="password" value={formdata.password} onChange={handleOnChange} className="txt2reg"/>
+                <input  type="password" id="pas" name="password" value={formdata.password} onChange={handleOnChange} className="txt2reg"/>
                 <button onClick={submitHandler}>Register Now</button>
             </div>
         

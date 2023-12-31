@@ -1,10 +1,13 @@
 
 import "./Login.css"
 import { useState } from "react";
+import axios from "axios"
+import { useNavigate } from "react-router-dom";
 import login1 from "../images/login1.jpg"
 
-const Login = () => {
 
+const Login = () => {
+  const Navigate=useNavigate()
   const [formdata,setFormData] =useState({email:"",password:""});
   const handleOnChange = (e) => {
     setFormData((prevData) => ({
@@ -13,11 +16,18 @@ const Login = () => {
     }))
   }
   
-  const submitHandler=(e)=>{
+  const submitHandler=async(e)=>{
+    try{
+      console.log("hii from frontend")
     e.preventDefault();
-    console.log("hello")
-    console.log(formdata)
-    setFormData({email:"",password:""})
+    console.log("formdata->",formdata)
+      await axios.post("http://localhost:4000/api/v1/login",formdata)
+      setFormData({email:"",password:""})
+      Navigate("/")
+    }
+    catch(error){
+       console.log(error)
+    }
   }
   return (
     <div className="registration">

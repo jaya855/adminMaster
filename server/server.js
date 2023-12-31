@@ -6,17 +6,17 @@ const dbFile=require("./config/dbConnect")
 const authRoutes=require("./routes/authRoutes")
 dotenv.config()
 
-
-
+app.use(cors({
+  origin: 'http://localhost:5173',
+  
+}));
+app.use(express.json())
 
 app.use("/api/v1",authRoutes)
-app.use(express.json())
-app.use(cors({
-    origin: 'http://localhost:5173',
-    
-  }));
+
+const PORT=process.env.PORT
 
 dbFile.dbConnect()
-app.listen("8800",(req,res)=>{
+app.listen(PORT,(req,res)=>{
   console.log("server connected successfuly")
 })
